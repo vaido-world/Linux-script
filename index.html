@@ -12,6 +12,7 @@ cat <<EOF
 EOF
 echo Linux script here
 
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'lt')]"
 gsettings set org.gnome.system.location enabled true
 gsettings org.gnome.desktop.datetime automatic-timezone true
 
