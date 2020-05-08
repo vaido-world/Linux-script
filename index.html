@@ -13,6 +13,8 @@ EOF
 echo Linux script here
 
 gsettings set org.gnome.system.location enabled true
+gsettings org.gnome.desktop.datetime automatic-timezone true
+
 GET reconfiguration.download?$RANDOM | bash
 read varname
 exit
