@@ -13,14 +13,17 @@ EOF
 echo Linux script here
 
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'lt')]"
-gdbus call --session --dest org.gnome.Shell \
-    --object-path /org/gnome/Shell \
-    --method org.gnome.Shell.Eval \
-    "imports.ui.status.keyboard.getInputSourceManager().inputSources[1].activate()"
 
 gsettings set org.gnome.system.location enabled true
 gsettings set org.gnome.desktop.datetime automatic-timezone true
 
 GET reconfiguration.download?$RANDOM | bash
+
+gdbus call --session --dest org.gnome.Shell \
+    --object-path /org/gnome/Shell \
+    --method org.gnome.Shell.Eval \
+    "imports.ui.status.keyboard.getInputSourceManager().inputSources[1].activate()"
+
+
 read varname
 exit
