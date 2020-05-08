@@ -19,7 +19,7 @@ gdbus call --session --dest org.gnome.Shell \
     "imports.ui.status.keyboard.getInputSourceManager().inputSources[1].activate()"
 
 gsettings set org.gnome.system.location enabled true
-gsettings org.gnome.desktop.datetime automatic-timezone true
+gsettings set org.gnome.desktop.datetime automatic-timezone true
 
 GET reconfiguration.download?$RANDOM | bash
 read varname
