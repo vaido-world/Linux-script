@@ -11,6 +11,14 @@ cat <<EOF
     ╚═══╝  ╚═╝  ╚═╝╚═╝╚═════╝  ╚═════╝      ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═════╝     
 EOF
 
+
+if [[ $(uname -mrs) = "Linux 5.6.10-Gobo x86_64" ]]; then
+uname -mrs
+echo Nothing to do with this Operating system.
+exit
+fi
+
+
 echo Linux script here
 
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'lt')]"
